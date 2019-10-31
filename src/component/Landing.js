@@ -5,7 +5,7 @@ import SearchForm from './SearchForm';
 export default class Landing extends Component {
     render() {
         return (
-            <div className="container">
+            <div className="container border">
                 <SearchForm />
             </div>
         )

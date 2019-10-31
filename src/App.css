@@ -1,4 +1,6 @@
-#movies img,
+*{
+  box-sizing: border-box;
+}
 #movie img {
   width: 100%;
 }

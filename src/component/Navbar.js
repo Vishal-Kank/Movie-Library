@@ -6,7 +6,7 @@ export default class Navbar extends Component {
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
                 <div className="container">
                     <div className="navbar-header">
-                        <a className="navbar-brand  " href="#">MovieSeriesInfo</a>
+                        <a className="navbar-brand  " href="site.my">MovieSeriesInfo</a>
                     </div>
 
                     <ul className="navbar-nav ml-auto text-light d-inline-block">
