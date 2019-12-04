@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './component/Navbar'
 import Footer from './component/Footer.';
 import store from './store';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import Landing from './component/Landing';
 
 class App extends Component {
