@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from './component/Navbar'
-import Footer from './component/Footer.';
+import Navbar from './component/layout/Navbar'
+import Footer from './component/layout/Footer';
 import store from './store';
 import { Provider } from 'react-redux';
-import Landing from './component/Landing';
+import Landing from './component/home/Landing';
+
+import { HashRouter as Router } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Navbar />
-        <Landing />
-        <Footer />
+        <Router>
+          <div>
+            <Navbar />
+            <Landing />
+            <Footer />
+          </div>
+        </Router>
       </Provider>
     )
   };

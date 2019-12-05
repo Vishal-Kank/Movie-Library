@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 export default class MovieCard extends Component {
     render() {
@@ -8,10 +9,10 @@ export default class MovieCard extends Component {
                 <div className='card card-body bg-dark text-center h-100 '>
                     <img className='w-100 mb-2' src={movie.Poster} alt='Movie-Cover' />
                     <h5 className='text-light card-title'>{movie.Title} - {movie.Year}</h5>
-                    <a className='btn btn-primary' href="#">
+                    <Link className='btn btn-primary' to={'/movie/' + movie.imdbId}>
                         Movie Details
                         <i className='fas fa-chevron-right' />
-                    </a>
+                    </Link>
                 </div>
             </div>
         )
