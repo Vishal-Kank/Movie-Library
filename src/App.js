@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './App.css';
+
 import Navbar from './component/layout/Navbar'
 import Footer from './component/layout/Footer';
-import store from './store';
-import { Provider } from 'react-redux';
 import Landing from './component/home/Landing';
+import Movie from './component/home/Movie';
 
-import { HashRouter as Router } from 'react-router-dom';
+import store from './store';
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div>
             <Navbar />
-            <Landing />
+            <Switch>
+              <Route exact path='/' component={Landing} />
+              <Route exact path='/movie/:id' component={Movie} />
+            </Switch>
             <Footer />
           </div>
         </Router>
